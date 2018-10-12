@@ -1,0 +1,44 @@
+section:first-child {
+    margin-bottom: 20px
+}
+
+.campo-busca {
+    width: 50%;
+    height: 200px;
+    padding-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+    .campo-busca input {
+        bottom: 0
+    }
+
+    .campo-busca p {
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+        user-select: none;
+    }
+
+        .campo-busca p::first-letter {
+            font-size: 30px;
+        }    
+
+.card {
+    margin: 0 20% 20px 20%
+}
+
+.mensagem-espera {
+    width: 300px;
+    margin: 120px auto auto;
+    color: #9c9fa2;
+}
+
+.mensagem-resultado {
+    width: 300px;
+    margin: 0 20% 20px 20%;
+    color: #6c757d;
+    font-weight: bold;
+    font-size: 14px
+}

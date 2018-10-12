@@ -1,0 +1,27 @@
+<section>
+  <div class="campo-busca">
+    <div class="row">
+      <div class="col-12">
+        <div class="form-group text-center">
+          <p>&Theta;&nbsp;TOTVS</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Buscar" autofocus
+            [(ngModel)] = "filtro" #campo/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <p class="mensagem-espera" *ngIf="campo.value == ''">Você ainda não realizou nenhuma busca!</p>
+  <p class="mensagem-resultado" *ngIf="campo.value != ''">Resultado da Busca</p>
+  <div class="card" *ngFor="let item of obterRespostasBusca(); let i = index">
+    <collapse-demo [itemProd]="item"></collapse-demo>
+  </div>  
+</section>

@@ -1,0 +1,18 @@
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+section:first-child {
+    height: 250px;
+    background: linear-gradient(to left, #0005b1, #1b22ff);
+}   
+
+body {
+    background-color: #eee;
+}
+
+.container-fluid {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+}

@@ -1,0 +1,49 @@
+<div class="card-header">
+
+    <div class="row">
+    <div class="col-9">
+        <div class="card-title">
+          <span>{{ itemProd.titulo }}</span>&nbsp;&nbsp;&nbsp;
+          <span class="card-subtitulo">{{ itemProd.subtitulo }}</span>
+        </div>
+    </div>
+    <div class="col-3">
+      <button type="link" class="btn btn-link" (click)="isCollapsed = !isCollapsed"
+              [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic">Detalhes&nbsp;&or;
+      </button>
+    </div>
+  </div>
+
+</div>
+
+<div class="card-body">
+
+  <div id="collapseBasic" [collapse]="!isCollapsed" class="detalhes">
+    <div class="row">
+      <div class="col-9">
+          <p>{{ itemProd.descricao }}</p>
+      </div>
+      <div class="col-3">
+        <button type="button" class="btn btn-primary" (click)="openModal(template)">Ver Mais</button>
+        <ng-template #template>
+            <div class="modal-body text-center">
+              <p>Tem certeza que deseja ir para a tela?</p>
+              <div class="row">
+                <div class="col-6">
+                  <div class="form-group">
+                    <button type="button" class="btn btn-primary" aria-label="Close" (click)="modalRef.hide()">SIM</button>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
+                    <button type="button" class="btn btn-default" aria-label="Close" (click)="modalRef.hide()">NÃO</button>                    
+                  </div>
+                </div>
+              </div>
+            </div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+  
+</div>

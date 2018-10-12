@@ -1,0 +1,13 @@
+.card-header button {
+    text-decoration: none
+}
+
+.card-header button,
+.card-body button:first-child {
+    float: right;
+}
+
+.card-title span:first-child {
+    font-size: 18px;
+    font-weight: bold
+}
